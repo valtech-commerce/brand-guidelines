@@ -1,0 +1,69 @@
+color:
+  primary:
+    coral: '#ff5252'
+    navy:  '#2b2d3c'
+
+  chart:
+    dusty-blue:  '#6f7984'
+    gentle-gray: '#d4d4d4'
+    mist:        '#f2f2f2'
+    mist-pale:   '#f7f7f7'
+
+  secondary:
+    oxford-blue:  '#3b425c'
+    chambray:     '#365f91'
+    picton-blue:  '#4ea4e7'
+    spindle:      '#b6d8ee'
+    java:         '#23bea5'
+    eastern-blue: '#1aabb6'
+
+  scale:
+    low:
+      base: '#2aa366'
+      fade: '#d9ead3'
+
+    medium:
+      base: '#f4b400'
+      fade: '#faf4c9'
+
+    high:
+      base: '#ff5252'
+      fade: '#ffe6ee'
+
+  rainbow:
+    supernova:     '#f9c807'
+    carrot-orange: '#f28e15'
+    deep-blush:    '#e47493'
+    disco:         '#8e2163'
+    olivine:       '#7eb572'
+    steel-blue:    '#437cac'
+    viking:        '#7eb9dc'
+    crimson:       '#e5133c'
+
+  greyscale:
+    nevada:      '#5c7480'
+    regent-grey: '#798f9a'
+    gull-grey:   '#96aab4'
+    loblolly:    '#b1c0c7'
+    geyser:      '#d6dfe4'
+    mystic:      '#e2e9ed'
+    aqua-haze:   '#f2f6f7'
+
+
+font:
+  content: '"Lato, Helvetica, Arial, Verdana, sans-serif"'
+  title:   '"Poppins, Helvetica, Arial, Verdana, sans-serif"'
+  code:    "\"'Fira Mono', Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', Courier, monospace\""
+
+
+font-weight:
+  content:
+    slim: 300
+    base: 400
+    fat:  700
+
+  title:
+    base: 700
+
+  code:
+    base: 400
