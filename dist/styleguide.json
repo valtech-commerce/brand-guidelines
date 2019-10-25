@@ -1,5 +1,7 @@
 {
   "color": {
+    "white": "#ffffff",
+    "black": "#000000",
     "primary": {
       "coral": "#ff5252",
       "navy": "#2b2d3c"
