@@ -1,9 +1,10 @@
 //--------------------------------------------------------
 //-- Styleguide - Feature tests
 //--------------------------------------------------------
-import pkgDir from 'pkg-dir';
-import sass   from 'sass';
-import fss    from '@absolunet/fss';
+import validateCss from 'css-validator';
+import pkgDir      from 'pkg-dir';
+import sass        from 'sass';
+import fss         from '@absolunet/fss';
 
 
 const DIST = `${pkgDir.sync(__dirname)}/dist`;
@@ -16,6 +17,39 @@ const minimumValuesTest = (config) => {
 
 
 
+
+
+
+describe(`Validate the styleguide CSS file`, () => {
+	let css;
+	let validatorData;
+
+	test(`Ensure file exists`, () => {
+		expect(() => {
+			css = fss.readFile(`${DIST}/styleguide.css`, 'utf8');
+		}).not.toThrow();
+	});
+
+	test(`Ensure content is validable`, (done) => {
+		expect(() => {
+			validateCss({ text: css }, (error, data) => {
+				if (error) {
+					throw new Error('CSS validation failed');
+				}
+
+				validatorData = data;
+				done();
+			});
+		}).not.toThrow();
+	});
+
+	test(`Ensure content is valid`, () => {
+		expect(validatorData).toBeObject();
+		expect(validatorData.validity).toBeTrue();
+		expect(validatorData.errors).toStrictEqual([]);
+		expect(validatorData.warnings).toStrictEqual([]);
+	});
+});
 
 
 

@@ -10,6 +10,7 @@
   },
   "keywords": [
     "brand",
+    "css",
     "scss",
     "styleguide"
   ],
@@ -47,6 +48,8 @@
     "@absolunet/manager": "2.1.0",
     "@absolunet/stylelint-config-nwayo": "1.3.1",
     "@absolunet/tester": "4.2.0",
+    "css-validator": "0.11.0",
+    "css-vars-from-json": "1.1.0",
     "sass": "1.50.0",
     "stylelint": "13.13.1"
   },

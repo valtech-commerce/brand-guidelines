@@ -18,6 +18,15 @@ $ npm install @absolunet/brand-guidelines
 
 ## Usage
 
+via CSS
+```css
+@import '@absolunet/brand-guidelines/dist/styleguide.css';
+
+a {
+	color: var(--absolunet-styleguide-color-primary-coral);
+}
+```
+
 via SCSS
 ```scss
 @import '@absolunet/brand-guidelines/dist/styleguide';

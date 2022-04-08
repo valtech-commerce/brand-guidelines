@@ -54,9 +54,9 @@ color:
 
 
 font:
-  content: '"Lato, Helvetica, Arial, Verdana, sans-serif"'
-  title:   '"Poppins, Helvetica, Arial, Verdana, sans-serif"'
-  code:    "\"'Fira Mono', Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', Courier, monospace\""
+  content: 'Lato, Helvetica, Arial, Verdana, sans-serif'
+  title:   'Poppins, Helvetica, Arial, Verdana, sans-serif'
+  code:    "'Fira Mono', Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', Courier, monospace"
 
 
 font-weight:
