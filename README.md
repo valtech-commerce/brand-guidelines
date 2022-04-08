@@ -6,7 +6,7 @@
 [![npms][npms-badge]][npms-url]
 [![License: MIT][license-badge]][license-url]
 
-> Absolunet Brand Guidelines
+> Valtech Brand Guidelines
 
 
 ## Install
@@ -23,7 +23,7 @@ via CSS
 @import '@absolunet/brand-guidelines/dist/guidelines.css';
 
 a {
-	color: var(--absolunet-guidelines-color-primary-coral);
+	color: var(--valtech-guidelines-color-primary-blue);
 }
 ```
 
@@ -32,7 +32,7 @@ via SCSS
 @import '@absolunet/brand-guidelines/dist/guidelines';
 
 a {
-	color: absolunet-guidelines('color.primary.coral');
+	color: valtech-guidelines('color.primary.blue');
 }
 ```
 
@@ -40,7 +40,7 @@ via JavaScript
 ```js
 import { guidelines } from "@absolunet/brand-guidelines";
 
-console.log(guidelines.color.primary.coral);  // #ff5252
+console.log(guidelines.color.primary.blue);  // #00bdfa
 ```
 
 

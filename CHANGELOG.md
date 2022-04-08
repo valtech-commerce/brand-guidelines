@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - CSS variables output
 
 ### Changed
+- Valtechize the guidelines
 - Rename `styleguide` to `guidelines`
 - Maintenance update
 

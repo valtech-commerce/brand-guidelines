@@ -28,16 +28,15 @@ manager.init({
 				fss.writeJson(`${dist}/guidelines.json`, guidelines, { space: 2 });
 
 				// CSS
-				const baseCss = fss.readFile(`${root}/ressources/guidelines.css`, 'utf8');
-				const cssVariables = cssVarsFromJSON({ 'absolunet-guidelines': guidelines }).replaceAll(';', ';\n\t');
+				const baseCss = fss.readFile(`${root}/resources/guidelines.css`, 'utf8');
+				const cssVariables = cssVarsFromJSON({ 'valtech-guidelines': guidelines }).replaceAll(';', ';\n\t');
 				fss.writeFile(`${dist}/guidelines.css`, baseCss.replace('/* variables */', cssVariables));
 
 				// SCSS
-				const baseScss = fss.readFile(`${root}/ressources/guidelines.scss`, 'utf8');
+				const baseScss = fss.readFile(`${root}/resources/guidelines.scss`, 'utf8');
 				guidelines.font.content = `"${guidelines.font.content}"`;
-				guidelines.font.title   = `"${guidelines.font.title}"`;
 				guidelines.font.code    = `"${guidelines.font.code}"`;
-				fss.writeFile(`${dist}/guidelines.scss`, `${jsonToScss.convert(JSON.stringify({ 'absolunet-guidelines': guidelines }))}\n\n${baseScss}`);
+				fss.writeFile(`${dist}/guidelines.scss`, `${jsonToScss.convert(JSON.stringify({ 'valtech-guidelines': guidelines }))}\n\n${baseScss}`);
 			}
 		}
 	}

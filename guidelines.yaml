@@ -1,72 +1,120 @@
 color:
-  white: '#ffffff'
-  black: '#000000'
 
+  # HEX
   primary:
-    coral: '#ff5252'
-    navy:  '#2b2d3c'
-
-  chart:
-    dusty-blue:  '#6f7984'
-    gentle-gray: '#d4d4d4'
-    mist:        '#f2f2f2'
-    mist-pale:   '#f7f7f7'
+    white: "#ffffff"
+    black: "#000000"
+    blue: "#00bdfa"
 
   secondary:
-    oxford-blue:  '#3b425c'
-    chambray:     '#365f91'
-    picton-blue:  '#4ea4e7'
-    spindle:      '#b6d8ee'
-    java:         '#23bea5'
-    eastern-blue: '#1aabb6'
+    connected-cyan: "#00fffa"
+    disruptive-rose: "#ff1b78"
+    transformative-turquoise: "#0dfdb4"
+    agile-yellow: "#fff011"
 
-  scale:
-    low:
-      base: '#2aa366'
-      fade: '#d9ead3'
+  gradient:
+    option-1: "linear-gradient(150deg, #00bdfa 0%, #0dfdb4 100%)"
+    option-2: "linear-gradient(150deg, #00bdfa 0%, #ff1b78 100%)"
 
-    medium:
-      base: '#f4b400'
-      fade: '#faf4c9'
+  # RGB
+  rgb:
+    primary:
+      white: "rbg(255, 255, 255)"
+      black: "rbg(0, 0, 0)"
+      blue: "rbg(0, 189, 250)"
 
-    high:
-      base: '#ff5252'
-      fade: '#ffe6ee'
+    secondary:
+      connected-cyan: "rbg(0, 255, 250)"
+      disruptive-rose: "rbg(255, 27, 120)"
+      transformative-turquoise: "rbg(13, 253, 180)"
+      agile-yellow: "rbg(255, 240, 17)"
 
-  rainbow:
-    supernova:     '#f9c807'
-    carrot-orange: '#f28e15'
-    deep-blush:    '#e47493'
-    disco:         '#8e2163'
-    olivine:       '#7eb572'
-    steel-blue:    '#437cac'
-    viking:        '#7eb9dc'
-    crimson:       '#e5133c'
+    gradient:
+      option-1: "linear-gradient(150deg, rgb(0, 189, 250) 0%, rgb(13, 253, 180) 100%)"
+      option-2: "linear-gradient(150deg, rgb(0, 189, 250) 0%, rgb(255, 27, 120) 100%)"
 
-  greyscale:
-    nevada:      '#5c7480'
-    regent-grey: '#798f9a'
-    gull-grey:   '#96aab4'
-    loblolly:    '#b1c0c7'
-    geyser:      '#d6dfe4'
-    mystic:      '#e2e9ed'
-    aqua-haze:   '#f2f6f7'
+  # CMYK
+  cmyk:
+    primary:
+      white:
+        c: 0
+        m: 0
+        y: 0
+        k: 0
+      black:
+        c: 75
+        m: 68
+        y: 67
+        k: 90
+      blue:
+        c: 65
+        m: 6
+        y: 0
+        k: 0
+
+    secondary:
+      connected-cyan:
+        c: 100
+        m: 0
+        y: 2
+        k: 0
+      disruptive-rose:
+        c: 0
+        m: 89
+        y: 53
+        k: 0
+      transformative-turquoise:
+        c: 95
+        m: 0
+        y: 29
+        k: 1
+      agile-yellow:
+        c: 0
+        m: 6
+        y: 93
+        k: 0
+
+  # Pantone
+  pantone:
+    primary:
+      black: "Black 6 C"
+      blue: "2995 C"
+
+    secondary:
+      connected-cyan: "3252 C"
+      disruptive-rose: "213 C"
+      transformative-turquoise: "2414 C"
+      agile-yellow: "107 C"
+
+  # Achromatic
+  achromatic:
+    gainsboro: '#dcdcdc'
+    light-gray: '#d3d3d3'
+    silver: '#c0c0c0'
+    medium-gray: '#bebebe'
+    spanish-gray: '#989898'
+    gray: '#808080'
+    dim-gray: '#696969'
+    davys-gray: "#555555"
+    jet: "#343434"
 
 
 font:
-  content: 'Lato, Helvetica, Arial, Verdana, sans-serif'
-  title:   'Poppins, Helvetica, Arial, Verdana, sans-serif'
-  code:    "'Fira Mono', Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', Courier, monospace"
+  content: "'Helvetica Neue', Roboto, Arial, Helvetica, Verdana, sans-serif"
+  code:    "'Roboto Mono', Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', Courier, monospace"
 
 
-font-weight:
-  content:
-    slim: 300
-    base: 400
-    fat:  700
-
+type:
   title:
-    base: 700
+    weight: 700
+    size: 2.5
+    leading: 1.2
 
-  code:
-    base: 400
+  subtitle:
+    weight: 300
+    size: 1.5
+    leading: 1.5
+
+  paragraph:
+    weight: 400
+    leading: 1.5
