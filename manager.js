@@ -18,26 +18,26 @@ manager.init({
 	tasks: {
 		build: {
 			postRun: ({ terminal }) => {
-				terminal.print('Build styleguides').spacer();
+				terminal.print('Build guidelines').spacer();
 
 				const root       = pkgDir.sync(__dirname);
 				const dist       = `${root}/dist`;
-				const styleguide = fss.readYaml(`${root}/styleguide.yaml`);
+				const guidelines = fss.readYaml(`${root}/guidelines.yaml`);
 
 				// JSON
-				fss.writeJson(`${dist}/styleguide.json`, styleguide, { space: 2 });
+				fss.writeJson(`${dist}/guidelines.json`, guidelines, { space: 2 });
 
 				// CSS
-				const baseCss = fss.readFile(`${root}/ressources/styleguide.css`, 'utf8');
-				const cssVariables = cssVarsFromJSON({ 'absolunet-styleguide': styleguide }).replaceAll(';', ';\n\t');
-				fss.writeFile(`${dist}/styleguide.css`, baseCss.replace('/* variables */', cssVariables));
+				const baseCss = fss.readFile(`${root}/ressources/guidelines.css`, 'utf8');
+				const cssVariables = cssVarsFromJSON({ 'absolunet-guidelines': guidelines }).replaceAll(';', ';\n\t');
+				fss.writeFile(`${dist}/guidelines.css`, baseCss.replace('/* variables */', cssVariables));
 
 				// SCSS
-				const baseScss = fss.readFile(`${root}/ressources/styleguide.scss`, 'utf8');
-				styleguide.font.content = `"${styleguide.font.content}"`;
-				styleguide.font.title   = `"${styleguide.font.title}"`;
-				styleguide.font.code    = `"${styleguide.font.code}"`;
-				fss.writeFile(`${dist}/styleguide.scss`, `${jsonToScss.convert(JSON.stringify({ 'absolunet-styleguide': styleguide }))}\n\n${baseScss}`);
+				const baseScss = fss.readFile(`${root}/ressources/guidelines.scss`, 'utf8');
+				guidelines.font.content = `"${guidelines.font.content}"`;
+				guidelines.font.title   = `"${guidelines.font.title}"`;
+				guidelines.font.code    = `"${guidelines.font.code}"`;
+				fss.writeFile(`${dist}/guidelines.scss`, `${jsonToScss.convert(JSON.stringify({ 'absolunet-guidelines': guidelines }))}\n\n${baseScss}`);
 			}
 		}
 	}

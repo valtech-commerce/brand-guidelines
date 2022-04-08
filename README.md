@@ -20,33 +20,33 @@ $ npm install @absolunet/brand-guidelines
 
 via CSS
 ```css
-@import '@absolunet/brand-guidelines/dist/styleguide.css';
+@import '@absolunet/brand-guidelines/dist/guidelines.css';
 
 a {
-	color: var(--absolunet-styleguide-color-primary-coral);
+	color: var(--absolunet-guidelines-color-primary-coral);
 }
 ```
 
 via SCSS
 ```scss
-@import '@absolunet/brand-guidelines/dist/styleguide';
+@import '@absolunet/brand-guidelines/dist/guidelines';
 
 a {
-	color: absolunet-styleguide('color.primary.coral');
+	color: absolunet-guidelines('color.primary.coral');
 }
 ```
 
 via JavaScript
 ```js
-import { styleguide } from "@absolunet/brand-guidelines";
+import { guidelines } from "@absolunet/brand-guidelines";
 
-console.log(styleguide.color.primary.coral);  // #ff5252
+console.log(guidelines.color.primary.coral);  // #ff5252
 ```
 
 
 
 ## Files
-The styleguide is also available as a JSON file under `dist/styleguide.json`
+The guidelines are also available as a JSON file under `dist/guidelines.json`
 
 The logos are available under `ressources/logos`
 

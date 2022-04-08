@@ -17,6 +17,6 @@ test
 
 .stylelintignore
 .stylelintrc.yaml
-styleguide.yaml
-ressources/styleguide.css
-ressources/styleguide.scss
+guidelines.yaml
+ressources/guidelines.css
+ressources/guidelines.scss

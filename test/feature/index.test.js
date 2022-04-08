@@ -1,5 +1,5 @@
 //--------------------------------------------------------
-//-- Styleguide - Feature tests
+//-- Guidelines - Feature tests
 //--------------------------------------------------------
 import validateCss from 'css-validator';
 import pkgDir      from 'pkg-dir';
@@ -20,13 +20,13 @@ const minimumValuesTest = (config) => {
 
 
 
-describe(`Validate the styleguide CSS file`, () => {
+describe(`Validate the guidelines CSS file`, () => {
 	let css;
 	let validatorData;
 
 	test(`Ensure file exists`, () => {
 		expect(() => {
-			css = fss.readFile(`${DIST}/styleguide.css`, 'utf8');
+			css = fss.readFile(`${DIST}/guidelines.css`, 'utf8');
 		}).not.toThrow();
 	});
 
@@ -53,13 +53,13 @@ describe(`Validate the styleguide CSS file`, () => {
 
 
 
-describe(`Validate the styleguide SCSS file`, () => {
+describe(`Validate the guidelines SCSS file`, () => {
 	let scss;
 	let css;
 
 	test(`Ensure file exists`, () => {
 		expect(() => {
-			scss = fss.readFile(`${DIST}/styleguide.scss`, 'utf8');
+			scss = fss.readFile(`${DIST}/guidelines.scss`, 'utf8');
 		}).not.toThrow();
 	});
 
@@ -70,7 +70,7 @@ describe(`Validate the styleguide SCSS file`, () => {
 		}).not.toThrow();
 	});
 
-	test(`Ensure styleguide generates no CSS`, () => {
+	test(`Ensure guidelines generates no CSS`, () => {
 		expect(css).toBeString();
 		expect(css).toBeEmpty();
 	});
@@ -78,13 +78,13 @@ describe(`Validate the styleguide SCSS file`, () => {
 
 
 
-describe(`Validate the styleguide JSON file`, () => {
+describe(`Validate the guidelines JSON file`, () => {
 	let json;
 	let config;
 
 	test(`Ensure file exists`, () => {
 		expect(() => {
-			json = fss.readFile(`${DIST}/styleguide.json`, 'utf8');
+			json = fss.readFile(`${DIST}/guidelines.json`, 'utf8');
 		}).not.toThrow();
 	});
 
@@ -94,23 +94,23 @@ describe(`Validate the styleguide JSON file`, () => {
 		}).not.toThrow();
 	});
 
-	test(`Ensure styleguide contains minimum values`, () => {
+	test(`Ensure guidelines contains minimum values`, () => {
 		minimumValuesTest(config);
 	});
 });
 
 
 
-describe(`Validate the entry point returns the styleguide`, () => {
-	let styleguide;
+describe(`Validate the entry point returns the guidelines`, () => {
+	let guidelines;
 
 	test(`Ensure it works`, () => {
 		expect(() => {
-			({ styleguide } = require(`${DIST}/node`));  // eslint-disable-line node/global-require
+			({ guidelines } = require(`${DIST}/node`));  // eslint-disable-line node/global-require
 		}).not.toThrow();
 	});
 
-	test(`Ensure styleguide contains minimum values`, () => {
-		minimumValuesTest(styleguide);
+	test(`Ensure guidelines contains minimum values`, () => {
+		minimumValuesTest(guidelines);
 	});
 });

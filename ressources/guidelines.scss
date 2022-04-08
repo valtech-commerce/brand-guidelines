@@ -1,4 +1,4 @@
-@function absolunet-styleguide-map-deep-split-path($path) {
+@function absolunet-guidelines-map-deep-split-path($path) {
 	$keys:      ();
 	$separator: '.';
 	$index:     str-index($path, $separator);
@@ -13,8 +13,8 @@
 	@return append($keys, $path);
 }
 
-@function absolunet-styleguide-map-deep-get($map, $path) {
-	@each $key in absolunet-styleguide-map-deep-split-path($path) {
+@function absolunet-guidelines-map-deep-get($map, $path) {
+	@each $key in absolunet-guidelines-map-deep-split-path($path) {
 		@if $map {
 			@if map-has-key($map, $key) {
 				$map: map-get($map, $key);
@@ -27,6 +27,6 @@
 	@return $map;
 }
 
-@function absolunet-styleguide($path) {
-	@return absolunet-styleguide-map-deep-get($absolunet-styleguide, $path);
+@function absolunet-guidelines($path) {
+	@return absolunet-guidelines-map-deep-get($absolunet-guidelines, $path);
 }
