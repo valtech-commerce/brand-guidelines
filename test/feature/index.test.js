@@ -72,7 +72,7 @@ describe(`Validate the entry point returns the styleguide`, () => {
 
 	test(`Ensure it works`, () => {
 		expect(() => {
-			({ styleguide } = require(`${DIST}/node`));  // eslint-disable-line global-require
+			({ styleguide } = require(`${DIST}/node`));  // eslint-disable-line node/global-require
 		}).not.toThrow();
 	});
 

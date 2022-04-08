@@ -1,1 +1,34 @@
 extends: '@absolunet/stylelint-config-nwayo'
+
+rules:
+  at-rule-blacklist: null
+  at-rule-disallowed-list:
+    - extend
+    - message: Unexpected @extend directive (at-rule-disallowed-list)
+
+  comment-word-blacklist: null
+  comment-word-disallowed-list:
+    - /todo/i
+    - severity: warning
+      message:  Don't forget this TODO
+
+  declaration-property-value-blacklist: null
+  declaration-property-value-disallowed-list:
+    - /^border/:     /none|rem-calc/
+      /^transition/: /all/
+      /.*/:          /rem-calc/
+
+
+  property-blacklist: null
+  property-disallowed-list:
+    - font-smoothing
+
+  unit-whitelist: null
+  unit-allowed-list:
+    - em
+    - '%'
+    - vw
+    - vh
+    - ms
+    - s
+    - deg

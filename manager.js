@@ -15,9 +15,9 @@ manager.init({
 		node: true
 	},
 	tasks: {
-		prepare: {
+		build: {
 			postRun: ({ terminal }) => {
-				terminal.println('Build styleguides');
+				terminal.print('Build styleguides').spacer();
 
 				const root       = pkgDir.sync(__dirname);
 				const dist       = `${root}/dist`;
