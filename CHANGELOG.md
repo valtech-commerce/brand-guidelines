@@ -16,6 +16,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Valtechize the guidelines
 - Rename `styleguide` to `guidelines`
+- Rename `ressources` folder to `resources`
 - Maintenance update
 
 

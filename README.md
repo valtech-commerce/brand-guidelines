@@ -48,9 +48,9 @@ console.log(guidelines.color.primary.blue);  // #00bdfa
 ## Files
 The guidelines are also available as a JSON file under `dist/guidelines.json`
 
-The logos are available under `ressources/logos`
+The logos are available under `resources/logos`
 
-The fonts are available under `ressources/fonts`
+The fonts are available under `resources/fonts`
 
 
 
