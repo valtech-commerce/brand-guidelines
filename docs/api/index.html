@@ -37,13 +37,13 @@
 	<link href="https://fonts.googleapis.com/css?family=Fira+Mono:400,500,700|Lato:100,100i,300,300i,400,400i,700,700i,900,900i|Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
 
 	
-	<!-- @absolunet/manager@2.0.0 (c) 2011-2019 Absolunet -->
+	<!-- @absolunet/manager@2.1.0 (c) 2011-2022 Absolunet -->
 </head>
 <body>
 	
 
 	<header>
-		<p class="package"><a href="../">@absolunet/brand-guidelines</a><span class="version">0.1.1</span></p>
+		<p class="package"><a href="../">@absolunet/brand-guidelines</a><span class="version">1.0.0</span></p>
 		<a href="https://github.com/absolunet/brand-guidelines" class="github" data-external="external">View on GitHub</a>
 	</header>
 
@@ -80,34 +80,41 @@
 
     <section class="readme">
         <article><h1>@absolunet/brand-guidelines</h1>
-<p><a href="https://www.npmjs.com/package/@absolunet/brand-guidelines"><img src="https://img.shields.io/npm/v/@absolunet/brand-guidelines.svg" alt="npm"></a>
-<a href="https://david-dm.org/absolunet/brand-guidelines"><img src="https://david-dm.org/absolunet/brand-guidelines/status.svg" alt="npm dependencies"></a>
-<a href="https://npms.io/search?q=%40absolunet%2Fbrand-guidelines"><img src="https://badges.npms.io/%40absolunet%2Fbrand-guidelines.svg" alt="npms"></a>
-<a href="https://travis-ci.com/absolunet/brand-guidelines/builds"><img src="https://travis-ci.com/absolunet/brand-guidelines.svg?branch=master" alt="Travis CI"></a>
-<a href="https://github.com/absolunet/eslint-config"><img src="https://img.shields.io/badge/code_style-@absolunet/node-659d32.svg" alt="Code style"></a></p>
+<p><a href="https://www.npmjs.com/package/@absolunet/brand-guidelines"><img src="https://img.shields.io/npm/v/@absolunet/brand-guidelines?style=flat-square" alt="npm"></a>
+<a href="https://david-dm.org/absolunet/brand-guidelines"><img src="https://img.shields.io/david/absolunet/brand-guidelines?style=flat-square" alt="npm dependencies"></a>
+<a href="https://github.com/absolunet/brand-guidelines/actions?query=workflow%3Atests+branch%3Aproduction"><img src="https://img.shields.io/github/workflow/status/absolunet/brand-guidelines/tests/production?label=tests&amp;style=flat-square" alt="Tests"></a>
+<a href="https://npms.io/search?q=%40absolunet%2Fbrand-guidelines"><img src="https://badges.npms.io/%40absolunet%2Fbrand-guidelines.svg?style=flat-square" alt="npms"></a>
+<a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/license-MIT-green?style=flat-square" alt="License: MIT"></a></p>
 <blockquote>
-<p>Absolunet Brand Guidelines</p>
+<p>Valtech Brand Guidelines</p>
 </blockquote>
 <h2>Install</h2>
 <pre class="prettyprint source lang-bash"><code>$ npm install @absolunet/brand-guidelines
 </code></pre>
 <h2>Usage</h2>
-<p>via SCSS</p>
-<pre class="prettyprint source lang-scss"><code>@import '@absolunet/brand-guidelines/dist/styleguide';
+<p>via CSS</p>
+<pre class="prettyprint source lang-css"><code>@import '@absolunet/brand-guidelines/dist/guidelines.css';
 
 a {
-	color: absolunet-styleguide('color.primary.coral');
+	color: var(--valtech-guidelines-color-primary-blue);
+}
+</code></pre>
+<p>via SCSS</p>
+<pre class="prettyprint source lang-scss"><code>@import '@absolunet/brand-guidelines/dist/guidelines';
+
+a {
+	color: valtech-guidelines('color.primary.blue');
 }
 </code></pre>
 <p>via JavaScript</p>
-<pre class="prettyprint source lang-js"><code>import { styleguide } from '@absolunet/brand-guidelines';
+<pre class="prettyprint source lang-js"><code>import { guidelines } from &quot;@absolunet/brand-guidelines&quot;;
 
-console.log(styleguide.color.primary.coral);  // #ff5252
+console.log(guidelines.color.primary.blue);  // #00bdfa
 </code></pre>
 <h2>Files</h2>
-<p>The styleguide is also available as a JSON file under <code>dist/styleguide.json</code></p>
-<p>The logos are available under <code>ressources/logos</code></p>
-<p>The fonts are available under <code>ressources/fonts</code></p>
+<p>The guidelines are also available as a JSON file under <code>dist/guidelines.json</code></p>
+<p>The logos are available under <code>resources/logos</code></p>
+<p>The fonts are available under <code>resources/fonts</code></p>
 <h2>Documentation</h2>
 <p>View <a href="https://documentation.absolunet.com/brand-guidelines">documentation</a></p>
 <p><br><br></p>
@@ -124,7 +131,7 @@ console.log(styleguide.color.primary.coral);  // #ff5252
 	</div>
 
 	<footer>
-		MIT © 2011-2019 <span class="made">Made with <span class="adjective" data-component="adjective">&#x2764;</span> by <a href="https://absolunet.com" data-external="external">Absolunet</a></span>
+		MIT © 2011-2022 <span class="made">Made with <span class="adjective" data-component="adjective">&#x2764;</span> by <a href="https://absolunet.com" data-external="external">Absolunet</a></span>
 	</footer>
 
 	<script src="../assets__/main.js"></script>
