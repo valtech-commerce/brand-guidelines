@@ -4,13 +4,12 @@
 .eslintignore
 .eslintrc.yaml
 .gitignore
-.travis.yml
 bitbucket-pipelines.yml
-code_of_conduct.md
-contributing.md
+CODE_OF_CONDUCT.md
+CONTRIBUTING.md
 manager.js
-security.md
-support.md
+SECURITY.md
+SUPPORT.md
 docs
 src
 test
@@ -18,5 +17,6 @@ test
 
 .stylelintignore
 .stylelintrc.yaml
-styleguide.yaml
-ressources/styleguide.scss
+guidelines.yaml
+resources/guidelines.css
+resources/guidelines.scss

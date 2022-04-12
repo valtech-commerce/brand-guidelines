@@ -13,6 +13,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 
+## [1.0.0] - 2022-04-11
+### Added
+- CSS variables output
+
+### Changed
+- Valtechize the guidelines
+- Rename `styleguide` to `guidelines`
+- Rename `ressources` folder to `resources`
+- Maintenance update
+
+
+
 ## [0.1.1] - 2019-10-25
 ### Added
 - Black / White
@@ -28,6 +40,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 
-[Unreleased]: https://github.com/absolunet/brand-guidelines/compare/0.1.1...HEAD
+[Unreleased]: https://github.com/absolunet/brand-guidelines/compare/1.0.0...HEAD
+[1.0.0]:      https://github.com/absolunet/brand-guidelines/compare/0.1.1...1.0.0
 [0.1.1]:      https://github.com/absolunet/brand-guidelines/compare/0.1.0...0.1.1
 [0.1.0]:      https://github.com/absolunet/brand-guidelines/releases/tag/0.1.0
