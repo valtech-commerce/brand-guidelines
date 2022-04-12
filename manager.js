@@ -35,6 +35,7 @@ manager.init({
 				// SCSS
 				const baseScss = fss.readFile(`${root}/resources/guidelines.scss`, 'utf8');
 				guidelines.font.content = `"${guidelines.font.content}"`;
+				guidelines.font.safe    = `"${guidelines.font.safe}"`;
 				guidelines.font.code    = `"${guidelines.font.code}"`;
 				fss.writeFile(`${dist}/guidelines.scss`, `${jsonToScss.convert(JSON.stringify({ 'valtech-guidelines': guidelines }))}\n\n${baseScss}`);
 			}

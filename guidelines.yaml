@@ -101,7 +101,8 @@ color:
 
 font:
   content: "'Helvetica Neue', Roboto, Arial, Helvetica, Verdana, sans-serif"
-  code:    "'Roboto Mono', Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', Courier, monospace"
+  safe: "Roboto, Arial, Helvetica, Verdana, sans-serif"
+  code: "'Roboto Mono', Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', Courier, monospace"
 
 
 type:
