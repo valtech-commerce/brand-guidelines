@@ -3,10 +3,11 @@
 //--------------------------------------------------------
 'use strict';
 
-const pkgDir      = require('pkg-dir');
-const fss         = require('@absolunet/fss');
-const jsonToScss  = require('@absolunet/json-to-scss');
-const { manager } = require('@absolunet/manager');
+const cssVarsFromJSON = require('css-vars-from-json');
+const pkgDir          = require('pkg-dir');
+const fss             = require('@absolunet/fss');
+const jsonToScss      = require('@absolunet/json-to-scss');
+const { manager }     = require('@absolunet/manager');
 
 
 manager.init({
@@ -17,16 +18,26 @@ manager.init({
 	tasks: {
 		build: {
 			postRun: ({ terminal }) => {
-				terminal.print('Build styleguides').spacer();
+				terminal.print('Build guidelines').spacer();
 
 				const root       = pkgDir.sync(__dirname);
 				const dist       = `${root}/dist`;
-				const styleguide = fss.readYaml(`${root}/styleguide.yaml`);
+				const guidelines = fss.readYaml(`${root}/guidelines.yaml`);
 
-				fss.writeJson(`${dist}/styleguide.json`, styleguide, { space: 2 });
+				// JSON
+				fss.writeJson(`${dist}/guidelines.json`, guidelines, { space: 2 });
 
-				const baseScss = fss.readFile(`${root}/ressources/styleguide.scss`, 'utf8');
-				fss.writeFile(`${dist}/styleguide.scss`, `${jsonToScss.convert(JSON.stringify({ 'absolunet-styleguide': styleguide }))}\n\n${baseScss}`);
+				// CSS
+				const baseCss = fss.readFile(`${root}/resources/guidelines.css`, 'utf8');
+				const cssVariables = cssVarsFromJSON({ 'valtech-guidelines': guidelines }).replaceAll(';', ';\n\t');
+				fss.writeFile(`${dist}/guidelines.css`, baseCss.replace('/* variables */', cssVariables));
+
+				// SCSS
+				const baseScss = fss.readFile(`${root}/resources/guidelines.scss`, 'utf8');
+				guidelines.font.content = `"${guidelines.font.content}"`;
+				guidelines.font.safe    = `"${guidelines.font.safe}"`;
+				guidelines.font.code    = `"${guidelines.font.code}"`;
+				fss.writeFile(`${dist}/guidelines.scss`, `${jsonToScss.convert(JSON.stringify({ 'valtech-guidelines': guidelines }))}\n\n${baseScss}`);
 			}
 		}
 	}

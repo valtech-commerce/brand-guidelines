@@ -6,7 +6,7 @@
 [![npms][npms-badge]][npms-url]
 [![License: MIT][license-badge]][license-url]
 
-> Absolunet Brand Guidelines
+> Valtech Brand Guidelines
 
 
 ## Install
@@ -18,30 +18,39 @@ $ npm install @absolunet/brand-guidelines
 
 ## Usage
 
-via SCSS
-```scss
-@import '@absolunet/brand-guidelines/dist/styleguide';
+via CSS
+```css
+@import '@absolunet/brand-guidelines/dist/guidelines.css';
 
 a {
-	color: absolunet-styleguide('color.primary.coral');
+	color: var(--valtech-guidelines-color-primary-blue);
+}
+```
+
+via SCSS
+```scss
+@import '@absolunet/brand-guidelines/dist/guidelines';
+
+a {
+	color: valtech-guidelines('color.primary.blue');
 }
 ```
 
 via JavaScript
 ```js
-import { styleguide } from "@absolunet/brand-guidelines";
+import { guidelines } from "@absolunet/brand-guidelines";
 
-console.log(styleguide.color.primary.coral);  // #ff5252
+console.log(guidelines.color.primary.blue);  // #00bdfa
 ```
 
 
 
 ## Files
-The styleguide is also available as a JSON file under `dist/styleguide.json`
+The guidelines are also available as a JSON file under `dist/guidelines.json`
 
-The logos are available under `ressources/logos`
+The logos are available under `resources/logos`
 
-The fonts are available under `ressources/fonts`
+The fonts are available under `resources/fonts`
 
 
 
