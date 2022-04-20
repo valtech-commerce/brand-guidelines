@@ -20,7 +20,7 @@ $ npm install @absolunet/brand-guidelines
 
 via CSS
 ```css
-@import '@absolunet/brand-guidelines/dist/guidelines.css';
+@import "@absolunet/brand-guidelines/dist/guidelines.css";
 
 a {
 	color: var(--valtech-guidelines-color-primary-blue);
@@ -29,10 +29,10 @@ a {
 
 via SCSS
 ```scss
-@import '@absolunet/brand-guidelines/dist/guidelines';
+@use "@absolunet/brand-guidelines/dist/guidelines";
 
 a {
-	color: valtech-guidelines('color.primary.blue');
+	color: guidelines.get("color.primary.blue");
 }
 ```
 
