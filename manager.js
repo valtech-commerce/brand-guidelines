@@ -37,7 +37,7 @@ manager.init({
 				guidelines.font.content = `"${guidelines.font.content}"`;
 				guidelines.font.safe    = `"${guidelines.font.safe}"`;
 				guidelines.font.code    = `"${guidelines.font.code}"`;
-				fss.writeFile(`${dist}/guidelines.scss`, `${jsonToScss.convert(JSON.stringify({ 'valtech-guidelines': guidelines }))}\n\n${baseScss}`);
+				fss.writeFile(`${dist}/guidelines.scss`, `${jsonToScss.convert(JSON.stringify({ '-guidelines': guidelines }))}\n\n${baseScss}`);
 			}
 		}
 	}

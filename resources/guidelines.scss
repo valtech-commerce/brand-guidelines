@@ -1,23 +1,27 @@
-@function valtech-guidelines-map-deep-split-path($path) {
-	$keys:      ();
-	$separator: '.';
-	$index:     str-index($path, $separator);
+@use "sass:list";
+@use "sass:map";
+@use "sass:string";
 
-	@while $index != null {
-		$item:  str-slice($path, 1, $index - 1);
-		$keys:  append($keys, $item);
-		$path:  str-slice($path, $index + 1);
-		$index: str-index($path, $separator);
+@function -map-deep-split-path($path) {
+	$keys: ();
+	$separator: ".";
+	$index: string.index($path, $separator);
+
+	@while $index {
+		$item: string.slice($path, 1, $index - 1);
+		$keys: list.append($keys, $item);
+		$path: string.slice($path, $index + 1);
+		$index: string.index($path, $separator);
 	}
 
-	@return append($keys, $path);
+	@return list.append($keys, $path);
 }
 
-@function valtech-guidelines-map-deep-get($map, $path) {
-	@each $key in valtech-guidelines-map-deep-split-path($path) {
+@function -map-deep-get($map, $path) {
+	@each $key in -map-deep-split-path($path) {
 		@if $map {
-			@if map-has-key($map, $key) {
-				$map: map-get($map, $key);
+			@if map.has-key($map, $key) {
+				$map: map.get($map, $key);
 			} @else {
 				$map: null;
 			}
@@ -27,6 +31,6 @@
 	@return $map;
 }
 
-@function valtech-guidelines($path) {
-	@return valtech-guidelines-map-deep-get($valtech-guidelines, $path);
+@function get($path) {
+	@return -map-deep-get($-guidelines, $path);
 }
