@@ -1,6 +1,11 @@
 extends: '@absolunet/stylelint-config-nwayo'
 
 rules:
+  string-quotes: double
+  scss/at-function-pattern:
+    - ^-?([a-z][a-z0-9]*)(-[a-z0-9]+)*$
+    - message: Function name must be kebab-case (scss/at-function-pattern)
+
   at-rule-blacklist: null
   at-rule-disallowed-list:
     - extend

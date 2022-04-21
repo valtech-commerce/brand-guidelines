@@ -12,7 +12,7 @@ const DIST = `${pkgDir.sync(__dirname)}/dist`;
 const minimumValuesTest = (config) => {
 	expect(config).toBeObject();
 	expect(config).not.toEqual({});
-	expect(config).toContainAllKeys(['color', 'font', 'font-weight']);
+	expect(config).toContainAllKeys(['color', 'font', 'type']);
 };
 
 
