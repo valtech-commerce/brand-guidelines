@@ -43,7 +43,7 @@
 	
 
 	<header>
-		<p class="package"><a href="../">@absolunet/brand-guidelines</a><span class="version">1.0.0</span></p>
+		<p class="package"><a href="../">@absolunet/brand-guidelines</a><span class="version">1.1.0</span></p>
 		<a href="https://github.com/absolunet/brand-guidelines" class="github" data-external="external">View on GitHub</a>
 	</header>
 
@@ -93,17 +93,17 @@
 </code></pre>
 <h2>Usage</h2>
 <p>via CSS</p>
-<pre class="prettyprint source lang-css"><code>@import '@absolunet/brand-guidelines/dist/guidelines.css';
+<pre class="prettyprint source lang-css"><code>@import &quot;@absolunet/brand-guidelines/dist/guidelines.css&quot;;
 
 a {
 	color: var(--valtech-guidelines-color-primary-blue);
 }
 </code></pre>
 <p>via SCSS</p>
-<pre class="prettyprint source lang-scss"><code>@import '@absolunet/brand-guidelines/dist/guidelines';
+<pre class="prettyprint source lang-scss"><code>@use &quot;@absolunet/brand-guidelines/dist/guidelines&quot;;
 
 a {
-	color: valtech-guidelines('color.primary.blue');
+	color: guidelines.get(&quot;color.primary.blue&quot;);
 }
 </code></pre>
 <p>via JavaScript</p>
