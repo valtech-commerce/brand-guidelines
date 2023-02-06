@@ -1,12 +1,12 @@
 {
-  "name": "@absolunet/brand-guidelines",
+  "name": "@valtech-commerce/brand-guidelines",
   "version": "1.1.0",
   "description": "Valtech Brand Guidelines",
   "definition": "",
-  "homepage": "https://documentation.absolunet.com/brand-guidelines",
+  "homepage": "https://valtech-commerce.github.io/brand-guidelines",
   "author": {
-    "name": "Absolunet",
-    "url": "https://absolunet.com"
+    "name": "Valtech Canada inc.",
+    "url": "https://www.valtech.ca/"
   },
   "keywords": [
     "brand",
@@ -17,11 +17,11 @@
   ],
   "license": "MIT",
   "repository": {
-    "url": "git://github.com/absolunet/brand-guidelines.git",
+    "url": "git://github.com/valtech-commerce/brand-guidelines.git",
     "type": "git"
   },
   "bugs": {
-    "url": "https://github.com/absolunet/brand-guidelines/issues"
+    "url": "https://github.com/valtech-commerce/brand-guidelines/issues"
   },
   "engines": {
     "node": ">= 12"

@@ -46,8 +46,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 
-[Unreleased]: https://github.com/absolunet/brand-guidelines/compare/1.1.0...HEAD
-[1.1.0]:      https://github.com/absolunet/brand-guidelines/compare/1.0.0...1.1.0
-[1.0.0]:      https://github.com/absolunet/brand-guidelines/compare/0.1.1...1.0.0
-[0.1.1]:      https://github.com/absolunet/brand-guidelines/compare/0.1.0...0.1.1
-[0.1.0]:      https://github.com/absolunet/brand-guidelines/releases/tag/0.1.0
+[Unreleased]: https://github.com/valtech-commerce/brand-guidelines/compare/1.1.0...HEAD
+[1.1.0]:      https://github.com/valtech-commerce/brand-guidelines/compare/1.0.0...1.1.0
+[1.0.0]:      https://github.com/valtech-commerce/brand-guidelines/compare/0.1.1...1.0.0
+[0.1.1]:      https://github.com/valtech-commerce/brand-guidelines/compare/0.1.0...0.1.1
+[0.1.0]:      https://github.com/valtech-commerce/brand-guidelines/releases/tag/0.1.0
